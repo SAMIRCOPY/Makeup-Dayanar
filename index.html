@@ -94,7 +94,7 @@
   .btn-ghost{ color:var(--ink); padding:16px 4px; border-bottom:1px solid var(--rose-deep); border-radius:0; }
   .btn-ghost:hover{ color:var(--rose-deep); }
 
-  .hero-art{ position:relative; width:100%; height:0; padding-top:105%; }
+  .hero-art{ position:relative; aspect-ratio:1/1.05; }
   .arc-ring{ position:absolute; border-radius:50%; border:1px solid var(--rose-pale); }
   .arc-1{ width:100%; height:100%; top:0; left:0; }
   .arc-2{ width:78%; height:78%; top:8%; right:0; border-color:var(--gold); opacity:.5; }
@@ -102,7 +102,6 @@
     position:absolute; width:62%; height:62%; top:19%; left:19%;
     border-radius:50%;
     overflow:hidden;
-    background:linear-gradient(155deg, var(--rose-pale), var(--cream-deep));
     box-shadow:0 30px 60px -20px rgba(169,105,91,0.35);
   }
   .core-circle img{ width:100%; height:100%; object-fit:cover; }
@@ -205,6 +204,28 @@
     letter-spacing:0.02em;
   }
 
+  /* ---------- RESEÑAS ---------- */
+  .resenas{ background:var(--white); border-top:1px solid var(--cream-deep); border-bottom:1px solid var(--cream-deep); }
+  .resenas-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+  .resena-card{
+    background:var(--cream); border:1px solid var(--cream-deep); border-radius:4px;
+    padding:32px 28px; display:flex; flex-direction:column; gap:16px;
+  }
+  .resena-stars{ display:flex; gap:4px; color:var(--gold); font-size:16px; letter-spacing:2px; }
+  .resena-texto{ color:var(--ink-soft); font-style:italic; font-family:'Cormorant Garamond', serif; font-size:19px; line-height:1.5; }
+  .resena-autor{ display:flex; align-items:center; gap:12px; margin-top:auto; padding-top:8px; }
+  .resena-avatar{
+    width:42px; height:42px; border-radius:50%; background:var(--rose-pale);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    font-family:'Playfair Display',serif; font-weight:700; color:var(--rose-deep); font-size:16px;
+  }
+  .resena-autor strong{ display:block; font-family:'Jost',sans-serif; font-weight:500; font-size:14.5px; color:var(--ink); }
+  .resena-autor span{ font-size:12.5px; color:var(--ink-soft); }
+
+  @media (max-width: 900px){
+    .resenas-grid{ grid-template-columns:1fr; }
+  }
+
   @media (max-width: 900px){
     nav ul{ display:none; }
     .hero-grid{ grid-template-columns:1fr; }
@@ -233,6 +254,7 @@
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#galeria">Galería</a></li>
       <li><a href="#proceso">Cómo trabajo</a></li>
+      <li><a href="#resenas">Reseñas</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <a href="https://wa.me/573044421817" class="btn nav-cta" target="_blank" rel="noopener">Escribir por WhatsApp</a>
@@ -417,6 +439,50 @@
           </span>
           @makeup__dr
         </a>
+      </div>
+    </div>
+  </section>
+  <section class="resenas" id="resenas">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">Reseñas</p>
+        <h2>Lo que dicen de mí</h2>
+        <p>La confianza de mis clientas es mi mejor carta de presentación.</p>
+      </div>
+      <div class="resenas-grid">
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-texto">"Quedé fascinada con mi maquillaje de quince años, se veía natural pero a la vez espectacular. Dayanar es súper profesional."</p>
+          <div class="resena-autor">
+            <div class="resena-avatar">M</div>
+            <div>
+              <strong>María José</strong>
+              <span>Quinceañera</span>
+            </div>
+          </div>
+        </div>
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-texto">"Mi maquillaje de novia duró impecable toda la fiesta, desde la ceremonia hasta la última foto. 100% recomendada."</p>
+          <div class="resena-autor">
+            <div class="resena-avatar">C</div>
+            <div>
+              <strong>Camila Restrepo</strong>
+              <span>Novia</span>
+            </div>
+          </div>
+        </div>
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-texto">"Puntual, detallista y muy amable. Me hizo sentir cómoda todo el proceso y el resultado superó lo que esperaba."</p>
+          <div class="resena-autor">
+            <div class="resena-avatar">L</div>
+            <div>
+              <strong>Laura Martínez</strong>
+              <span>Evento social</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

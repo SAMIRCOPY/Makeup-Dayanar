@@ -95,26 +95,23 @@
   .btn-ghost:hover{ color:var(--rose-deep); }
 
   .hero-art{ position:relative; aspect-ratio:1/1.05; }
-  .arc-ring{ position:absolute; border-radius:50%; border:1px solid var(--rose-pale); }
-  .arc-1{ width:100%; height:100%; top:0; left:0; }
-  .arc-2{ width:78%; height:78%; top:8%; right:0; border-color:var(--gold); opacity:.5; }
-  .core-circle{
-    position:absolute; width:62%; height:62%; top:19%; left:19%;
-    border-radius:50%;
+  .hero-photo{
+    position:absolute; inset:0;
+    border-radius:6px;
     overflow:hidden;
     background:linear-gradient(155deg, var(--rose-pale), var(--cream-deep));
     box-shadow:0 30px 60px -20px rgba(169,105,91,0.35);
   }
-  .core-circle img{ width:100%; height:100%; object-fit:cover; }
+  .hero-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
   .hero-art .float-badge{
     position:absolute; background:var(--white); border:1px solid var(--cream-deep);
     border-radius:2px; padding:14px 18px; box-shadow:0 20px 40px -18px rgba(36,30,28,0.25);
     font-family:'Jost',sans-serif;
   }
-  .badge-1{ top:4%; left:-4%; }
+  .badge-1{ top:6%; left:-8%; }
   .badge-1 strong{ font-family:'Playfair Display',serif; font-size:20px; display:block; color:var(--rose-deep); }
   .badge-1 span{ font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); }
-  .badge-2{ bottom:6%; right:-6%; }
+  .badge-2{ bottom:6%; right:-8%; }
   .badge-2 strong{ font-family:'Playfair Display',serif; font-size:20px; display:block; color:var(--rose-deep); }
   .badge-2 span{ font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); }
 
@@ -241,8 +238,8 @@
     .hero-art .float-badge{ padding:8px 12px; max-width:120px; }
     .badge-1 strong, .badge-2 strong{ font-size:14px; }
     .badge-1 span, .badge-2 span{ font-size:8.5px; }
-    .badge-1{ top:-4%; left:-6%; }
-    .badge-2{ bottom:-4%; right:-6%; }
+    .badge-1{ top:-4%; left:-4%; }
+    .badge-2{ bottom:-4%; right:-4%; }
   }
 </style>
 </head>
@@ -282,9 +279,7 @@
         </div>
       </div>
       <div class="hero-art">
-        <div class="arc-ring arc-1"></div>
-        <div class="arc-ring arc-2"></div>
-        <div class="core-circle"><img src="images/matrimonio.jpeg" alt="Novia con maquillaje elegante y velo bordado"></div>
+        <div class="hero-photo"><img src="images/matrimonio.jpeg" alt="Novia con maquillaje elegante y velo bordado"></div>
         <div class="float-badge badge-1"><strong>Full Glam</strong><span>Look intenso y sofisticado</span></div>
         <div class="float-badge badge-2"><strong>Novias</strong><span>Impecable, todo el día</span></div>
       </div>
